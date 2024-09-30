@@ -151,29 +151,3 @@ The project can be broken down into modular components for each task:
 
 5. **User Interaction**:
    - The user uploads the file and downloads the PDF report after the analysis and visualizations are complete.
-
-
-
-
-
-# Other ideas
-
-# Rock Type Classifier
-
-## Objective
-Develop a basic tool to classify different rock types based on physical properties such as density, porosity, and hardness.
-
-## Features
-- **User Input**: Users can input properties (e.g., density, color, grain size, hardness) through a CSV file.
-- **Basic Classification**: The tool suggests a possible rock type based on the provided inputs using simple if-else conditions or basic logic.
-- **Advanced Option**: Enhance the classifier by incorporating a small dataset and using basic decision trees to improve classification accuracy.
-
-# Simple Ore Grade Estimator
-
-## Objective
-Create a basic tool to estimate the ore grade of a mineral deposit.
-
-## Features
-- **User Input**: Users input the concentration of minerals found in core samples (e.g., gold, iron, copper content in g/t) via a CSV file.
-- **Grade Calculation**: The tool calculates the average ore grade for the deposit.
-- **Visualization**: Display the results with a simple bar chart showing the grade across different core samples.
