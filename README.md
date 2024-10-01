@@ -40,7 +40,7 @@ To install the required libraries and the final program package, use 'pip instal
 2. **Run the Script**: Execute the Python script to analyze the text and generate visualizations.
 3. **Output**: Visualizations and a PDF report will be created, including charts and analysis results.
 
-# THE EXTENSIVE OUTLINE
+# Extensive Outline
 
 ### **1. Planning**
 
