@@ -32,7 +32,7 @@ This project is a Python application designed to analyze text files and generate
 
 ## Installation
 
-To install the required libraries, I will use 'pip install'.
+To install the required libraries and the final program package, use 'pip install'.
 
 ## Usage
 
@@ -40,15 +40,14 @@ To install the required libraries, I will use 'pip install'.
 2. **Run the Script**: Execute the Python script to analyze the text and generate visualizations.
 3. **Output**: Visualizations and a PDF report will be created, including charts and analysis results.
 
-# THE EXTENSIVE OUTLINE
+# Extensive Outline
 
 ### **1. Planning**
 
 #### **What do you want to do?**
-- **Goal**: Develop a Python program that takes a text file as input, performs a detailed analysis of the text, and outputs both statistical data and visualizations. The final output will be a downloadable PDF report summarizing the analysis and including relevant charts.
+- **Goal**: Develop a Python program that takes a text file as input, performs a detailed analysis of the text, and outputs both statistical data and visualizations. The final output will be a downloadable PDF report summarizing the analysis and including the relevant visualizations.
   
 #### **Requirements**:
-- **Functional Requirements**:
   1. **Text File Input**: The program should accept a text file (e.g., `.txt`) and read its contents.
   2. **Text Analysis**: The program should count the number of:
      - Words
@@ -63,11 +62,6 @@ To install the required libraries, I will use 'pip install'.
   4. **PDF Report**: Create a downloadable PDF report that includes:
      - Summary of the analysis (statistics like word count, sentence count, etc.)
      - Generated visualizations as images.
-  
-- **Non-functional Requirements**:
-  1. **User-Friendly**: The input process and output report should be easy to manage for the user.
-  2. **Performance**: The program should handle moderately large text files efficiently.
-  3. **Compatibility**: The solution should be platform-independent, working on Windows, macOS, and Linux.
 
 #### **Constraints**:
 - **File Format**: Only `.txt` files will be accepted for simplicity.
@@ -87,10 +81,6 @@ To install the required libraries, I will use 'pip install'.
 ### **2. Design**
 
 #### **How will you do it?**
-
-The project can be broken down into modular components for each task:
-
-#### **Components**:
 
 1. **Input Handling Component**:
    - **Objective**: Allow the user to upload a text file (`.txt`).
