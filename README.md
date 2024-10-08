@@ -24,11 +24,9 @@ This project is a Python application designed to analyze text files and generate
 ## Required Libraries
 
 - `nltk`
-- `spaCy`
 - `matplotlib`
 - `seaborn`
 - `fpdf`
-- `reportlab`
 
 ## Installation
 
@@ -58,9 +56,10 @@ To install the required libraries and the final program package, use 'pip instal
   3. **Visualizations**: Generate the following charts:
      - Bar chart for word, sentence, and paragraph counts.
      - Horizontal bar chart for character counts (with and without spaces).
-     - Histogram of word length distribution.
+     - Histogram for word length distribution.
   4. **PDF Report**: Create a downloadable PDF report that includes:
-     - Summary of the analysis (statistics like word count, sentence count, etc.)
+     - The text file input.
+     - Summary of the analysis (statistics like word count, sentence count, etc.).
      - Generated visualizations as images.
 
 #### **Constraints**:
@@ -91,7 +90,7 @@ To install the required libraries and the final program package, use 'pip instal
 2. **Text Analysis Component**:
    - **Objective**: Analyze the text to count words, sentences, paragraphs, characters, and calculate average word length.
    - **Implementation**:
-     - **Word Count**: Use `nltk.word_tokenize()` or `re.split()`.
+     - **Word Count**: Use `nltk.word_tokenize()`.
      - **Sentence Count**: Use `nltk.sent_tokenize()` or split based on common sentence terminators.
      - **Paragraph Count**: Split text based on double newline characters (`\n\n`).
      - **Character Count**: Use `len(text)` and `len(text.replace(" ", ""))` for with and without spaces.
@@ -107,7 +106,7 @@ To install the required libraries and the final program package, use 'pip instal
      - Save the visualizations as `.png` images using `plt.savefig()`.
 
 4. **PDF Generation Component**:
-   - **Objective**: Generate a PDF report summarizing the analysis and including the charts.
+   - **Objective**: Generate a PDF report with the text file input, a summary of the analysis and including the charts.
    - **Implementation**:
      - Use `fpdf` to create the PDF.
      - Add text-based summaries (word counts, character counts, etc.).
