@@ -134,7 +134,7 @@ generate_visualizations(analysis_result, content)
 # * Remember to add plt.savefig('title.png') later - fixed
 # * Images are not saved for some reason - fixed
 
-# # PDF Generation - not done yet!
+# # PDF Generation
 
 # In[5]:
 
@@ -210,7 +210,6 @@ generate_pdf_report(analysis_result, content)
 # * Fix all errors in output - fixed
 # * Images in the pdf doc are cut off (the title on the y-axis of second image) - fixed
 # * I want to add the input text itself also in the pdf report in the beginning - fixed
-# * I might want to head headers for each part in the pdf report
 
 # In[ ]:
 
