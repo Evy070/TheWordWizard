@@ -1,0 +1,99 @@
+(base) evydebruine@Evys-MacBook-Air TheWordWizard % pytest Main_Code_Final.py]
+============================= test session starts ==============================
+platform darwin -- Python 3.8.8, pytest-8.3.3, pluggy-1.5.0
+rootdir: /Users/evydebruine/TheWordWizard
+plugins: anyio-2.2.0
+collected 0 items                                                              
+
+============================ no tests ran in 0.00s =============================
+ERROR: file or directory not found: Main_Code_Final.py]
+
+(base) evydebruine@Evys-MacBook-Air TheWordWizard % pytest Main_Code_Final.py
+============================= test session starts ==============================
+platform darwin -- Python 3.8.8, pytest-8.3.3, pluggy-1.5.0
+rootdir: /Users/evydebruine/TheWordWizard
+plugins: anyio-2.2.0
+collected 0 items                                                              
+
+=============================== warnings summary ===============================
+../../../Applications/anaconda3/lib/python3.8/site-packages/sklearn/utils/fixes.py:28
+  /Applications/anaconda3/lib/python3.8/site-packages/sklearn/utils/fixes.py:28: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import parse_version  # type: ignore
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154
+  /Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('mpl_toolkits')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154
+../../../Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154
+../../../Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154
+../../../Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154
+../../../Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154
+../../../Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154
+../../../Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154
+  /Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154
+../../../Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154
+  /Applications/anaconda3/lib/python3.8/site-packages/pkg_resources/__init__.py:3154: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('zope')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/matplotlib/__init__.py:169
+../../../Applications/anaconda3/lib/python3.8/site-packages/matplotlib/__init__.py:169
+../../../Applications/anaconda3/lib/python3.8/site-packages/matplotlib/__init__.py:169
+../../../Applications/anaconda3/lib/python3.8/site-packages/matplotlib/__init__.py:169
+../../../Applications/anaconda3/lib/python3.8/site-packages/matplotlib/__init__.py:169
+  /Applications/anaconda3/lib/python3.8/site-packages/matplotlib/__init__.py:169: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if LooseVersion(module.__version__) < minver:
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../../../Applications/anaconda3/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../../../Applications/anaconda3/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../../../Applications/anaconda3/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../../../Applications/anaconda3/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../../../Applications/anaconda3/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../../../Applications/anaconda3/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../../../Applications/anaconda3/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+  /Applications/anaconda3/lib/python3.8/site-packages/setuptools/_distutils/version.py:337: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    other = LooseVersion(other)
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/__init__.py:10
+  /Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/__init__.py:10: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    _nlv = LooseVersion(_np_version)
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/__init__.py:11
+  /Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/__init__.py:11: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    np_version_under1p17 = _nlv < LooseVersion("1.17")
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/__init__.py:12
+  /Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/__init__.py:12: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    np_version_under1p18 = _nlv < LooseVersion("1.18")
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/__init__.py:13
+  /Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/__init__.py:13: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    _np_version_under1p19 = _nlv < LooseVersion("1.19")
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/__init__.py:14
+  /Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/__init__.py:14: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    _np_version_under1p20 = _nlv < LooseVersion("1.20")
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/function.py:120
+../../../Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/function.py:120
+  /Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/numpy/function.py:120: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if LooseVersion(__version__) >= LooseVersion("1.17.0"):
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/_optional.py:116
+  /Applications/anaconda3/lib/python3.8/site-packages/pandas/compat/_optional.py:116: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if distutils.version.LooseVersion(version) < minimum_version:
+
+../../../Applications/anaconda3/lib/python3.8/site-packages/seaborn/rcmod.py:82
+  /Applications/anaconda3/lib/python3.8/site-packages/seaborn/rcmod.py:82: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if LooseVersion(mpl.__version__) >= "3.0":
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= 33 warnings in 6.77s =============================
+(base) evydebruine@Evys-MacBook-Air TheWordWizard % 
