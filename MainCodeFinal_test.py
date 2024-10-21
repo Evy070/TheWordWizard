@@ -22,24 +22,16 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 # In[2]:
 
 
-def read_text_file(file_path):
+def test_read_text_file(file_path):
     """
     Reads the content of a .txt file.
     
     :parameter file_path: Path to the text file.
     :return: The content of the file as a string or None if an error occurs.
     """
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            text = file.read()
-        return text
-    except FileNotFoundError:
-        print("File not found! Please provide a valid file path.")
-        return None
+file_path = 'mercedesbenz.txt'  # Set the correct file path here
 
-file_path = 'mercedesbenz.txt'
-content = read_text_file(file_path)
-
+content = test_read_text_file(file_path)  # Ensure the file exists
 if content is not None:
     print(content)
 
@@ -49,7 +41,7 @@ if content is not None:
 # In[3]:
 
 
-def analyze_text(text):
+def test_analyze_text(text):
     """
     Analyzes the given text and returns statistics.
     
@@ -78,8 +70,8 @@ def analyze_text(text):
     return analysis
 
 if content is not None:
-    analysis_result = analyze_text(content)  # Analyze the content
-    print(analysis_result)  # Print the analysis result
+    test_analysis_result = test_analyze_text(content)  # Analyze the content
+    print(test_analysis_result)  # Print the analysis result
 
 
 # ## Comments
@@ -91,7 +83,7 @@ if content is not None:
 # In[4]:
 
 
-def generate_visualizations(analysis_result, content):
+def test_generate_visualizations(test_analysis_result, content):
     """
     Generates and displays the required visualizations based on the analysis.
     
@@ -101,7 +93,7 @@ def generate_visualizations(analysis_result, content):
     # Bar chart for word, sentence, and paragraph counts
     plt.figure(figsize=(8, 6))
     plt.bar(['Words', 'Sentences', 'Paragraphs'], 
-            [analysis_result['word_count'], analysis_result['sentence_count'], analysis_result['paragraph_count']],
+            [test_analysis_result['word_count'], test_analysis_result['sentence_count'], test_analysis_result['paragraph_count']],
             color=['blue', 'green', 'red'])
     plt.title('Word, Sentence, and Paragraph Counts')
     plt.savefig('counts_chart.png')
@@ -110,7 +102,7 @@ def generate_visualizations(analysis_result, content):
     # Horizontal bar chart for character counts
     plt.figure(figsize=(8, 6))
     plt.barh(['With spaces', 'Without spaces'], 
-         [analysis_result['character_count'], analysis_result['character_count_no_spaces']], 
+         [test_analysis_result['character_count'], test_analysis_result['character_count_no_spaces']], 
          color=['purple', 'orange'])
     plt.yticks(rotation=90, va='center') # Set y-axis labels vertically and centered
     plt.title('Character Counts')
@@ -127,7 +119,7 @@ def generate_visualizations(analysis_result, content):
     plt.savefig('word_length_histogram.png')
     plt.show()
 
-generate_visualizations(analysis_result, content)
+test_generate_visualizations(test_analysis_result, content)
 
 
 # ## Comments
@@ -144,7 +136,7 @@ class PDFReport(FPDF):
         self.set_font('Helvetica', 'B', 12)
         self.cell(0, 10, 'Text Analysis Report', 0, new_x=XPos.LMARGIN, new_y=YPos.NEXT, align='C')
         
-    def add_input_text(self, input_text):
+    def test_add_input_text(self, input_text):
         """
         Adds the input text to the PDF.
         
@@ -154,7 +146,7 @@ class PDFReport(FPDF):
         self.ln(10)  # Space before the text
         self.multi_cell(0, 10, f"{input_text}", align='L')  # Wrap text
 
-    def add_analysis_summary(self, analysis):
+    def test_add_analysis_summary(self, analysis):
         self.set_font('Helvetica', 'B', 12)
         self.ln(10)
         self.cell(0, 10, f"Word Count: {analysis['word_count']}", 0, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
@@ -164,7 +156,7 @@ class PDFReport(FPDF):
         self.cell(0, 10, f"Character Count (without spaces): {analysis['character_count_no_spaces']}", 0, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         self.cell(0, 10, f"Average Word Length: {analysis['average_word_length']:.2f}", 0, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
-    def add_image(self, image_path, img_width=160):
+    def test_add_image(self, image_path, img_width=160):
         # Calculate x-position to center the image
         page_width = self.w  # Total page width
         x_position = (page_width - img_width) / 2  # Centered position
@@ -172,7 +164,7 @@ class PDFReport(FPDF):
         self.ln(10)
         self.image(image_path, x=x_position, w=img_width)
 
-def generate_pdf_report(analysis, input_text):
+def test_generate_pdf_report(analysis, input_text):
     """
     Generates a PDF report of the text analysis.
     
@@ -183,16 +175,16 @@ def generate_pdf_report(analysis, input_text):
     pdf.add_page()
     
     # Add input text at the beginning
-    pdf.add_input_text(input_text)
+    pdf.test_add_input_text(input_text)
 
     # Add summary
-    pdf.add_analysis_summary(analysis)
+    pdf.test_add_analysis_summary(analysis)
 
     # Add images
     try:
-        pdf.add_image('counts_chart.png')
-        pdf.add_image('character_chart.png')
-        pdf.add_image('word_length_histogram.png')
+        pdf.test_add_image('counts_chart.png')
+        pdf.test_add_image('character_chart.png')
+        pdf.test_add_image('word_length_histogram.png')
     except FileNotFoundError as e:
         print(f"Warning: {e} - One or more image files not found.")
 
@@ -200,7 +192,7 @@ def generate_pdf_report(analysis, input_text):
     pdf.output('text_analysis_report.pdf')
     print("PDF report generated: 'text_analysis_report.pdf'")
 
-generate_pdf_report(analysis_result, content)
+test_generate_pdf_report(test_analysis_result, content)
 
 
 # ## Comments
