@@ -38,7 +38,7 @@ To install the required libraries and the final program package, use 'pip instal
 2. **Run the Script**: Execute the Python script to analyze the text and generate visualizations.
 3. **Output**: Visualizations and a PDF report will be created, including charts and analysis results.
 
-# Extensive Outline
+# The Software Development
 
 ### **1. Planning**
 
@@ -140,3 +140,38 @@ To install the required libraries and the final program package, use 'pip instal
 
 5. **User Interaction**:
    - The user uploads the file and downloads the PDF report after the analysis and visualizations are complete.
+
+---
+
+### **3. Implementation**
+
+Writing the code. Including docstrings.
+
+---
+
+### **4. Testing**
+
+Does the code do what it is supposed to do? Does it handle errors well?
+
+Testing each function within Jupyter Notebook.
+
+Running pytest to check test success for full python project. 
+
+---
+
+### **5. Documentation**
+
+How do you use the code? How does it work? How do you contribute to it?
+
+---
+
+### **6. Deployment**
+
+How do you share the code with others? How do you make it easy for others to use it?
+
+---
+
+
+
+
+
