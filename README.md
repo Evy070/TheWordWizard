@@ -118,8 +118,6 @@ To install the required libraries and the final program package, use 'pip instal
      - If a UI is needed, tools like **Streamlit** or **Tkinter** can provide a simple interface.
      - For this project, I guess this will not be necessary.
 
----
-
 #### **How do the components interact?**
 
 1. **Input Handling**: 
