@@ -8,7 +8,7 @@ import pytest
 from pytest import approx
 import os
 
-from Main_Code_Final import read_text_file, analyze_text, generate_visualizations, generate_pdf_report
+from Main_Code_Python import read_text_file, analyze_text, generate_visualizations, generate_pdf_report
 
 def test_all_functions():
     # ===================== Test read_text_file ===================== #
@@ -19,7 +19,7 @@ def test_all_functions():
     assert result is None, "Expected None for a file that does not exist."
 
     # Test with a valid file path (make sure this file exists in the same directory)
-    valid_path = "mercedesbenz.txt"  # Replace with a valid .txt file
+    valid_path = "4_Input_Sample_Text_Mercedes_Benz.txt"  # Replace with a valid .txt file
     result = read_text_file(valid_path)
     assert isinstance(result, str), "Expected file content to be a string."
     assert len(result) > 0, "Expected non-empty file content."
@@ -65,14 +65,9 @@ def test_all_functions():
     generate_visualizations(mock_analysis, mock_text)
 
     # Check if the images are created
-    assert os.path.exists("counts_chart.png"), "Counts chart image should be created."
-    assert os.path.exists("character_chart.png"), "Character chart image should be created."
-    assert os.path.exists("word_length_histogram.png"), "Word length histogram image should be created."
-
-    # Optionally, you can clean up by removing the files after the test
-    os.remove("counts_chart.png")
-    os.remove("character_chart.png")
-    os.remove("word_length_histogram.png")
+    assert os.path.exists("7_output_counts_chart.png"), "Counts chart image should be created."
+    assert os.path.exists("8_output_character_chart.png"), "Character chart image should be created."
+    assert os.path.exists("9_output_word_length_histogram.png"), "Word length histogram image should be created."
 
     # ===================== Test generate_pdf_report ===================== #
     
@@ -80,8 +75,5 @@ def test_all_functions():
     generate_pdf_report(mock_analysis, mock_text)
 
     # Check if the PDF report is created
-    assert os.path.exists("text_analysis_report.pdf"), "PDF report should be created."
-
-    # Optionally, clean up the generated PDF
-    os.remove("text_analysis_report.pdf")
+    assert os.path.exists("10_output_analysis_report.pdf"), "PDF report should be created."
 

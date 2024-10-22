@@ -4,7 +4,7 @@
 # In[ ]:
 
 
-from Main_Code_Final import generate_visualizations
+from Main_Code_Python import generate_visualizations
 
 import os
 
@@ -25,12 +25,7 @@ def test_generate_visualizations():
     generate_visualizations(mock_analysis, mock_text)
 
     # Check if the images are created
-    assert os.path.exists("counts_chart.png"), "Counts chart image should be created."
-    assert os.path.exists("character_chart.png"), "Character chart image should be created."
-    assert os.path.exists("word_length_histogram.png"), "Word length histogram image should be created."
-
-    # Optionally, you can clean up by removing the files after the test
-    os.remove("counts_chart.png")
-    os.remove("character_chart.png")
-    os.remove("word_length_histogram.png")
+    assert os.path.exists("7_output_counts_chart.png"), "Counts chart image should be created."
+    assert os.path.exists("8_output_character_chart.png"), "Character chart image should be created."
+    assert os.path.exists("9_output_word_length_histogram.png"), "Word length histogram image should be created."
 

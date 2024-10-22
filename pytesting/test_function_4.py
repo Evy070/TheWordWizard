@@ -4,7 +4,7 @@
 # In[ ]:
 
 
-from Main_Code_Final import generate_pdf_report
+from Main_Code_Python import generate_pdf_report
 
 import os
 
@@ -25,8 +25,5 @@ def test_generate_pdf_report():
     generate_pdf_report(mock_analysis, mock_text)
 
     # Check if the PDF report is created
-    assert os.path.exists("text_analysis_report.pdf"), "PDF report should be created."
-
-    # Optionally, clean up the generated PDF
-    os.remove("text_analysis_report.pdf")
+    assert os.path.exists("10_output_analysis_report.pdf"), "PDF report should be created."
 

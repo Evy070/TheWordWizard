@@ -7,7 +7,7 @@
 import pytest
 from pytest import approx
 
-from Main_Code_Final import analyze_text
+from Main_Code_Python import analyze_text
 
 def test_analyze_text():
     # Mock text for analysis
