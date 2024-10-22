@@ -24,7 +24,7 @@
 
 #### **Constraints**:
 - **File Format**: Only `.txt` files will be accepted for simplicity.
-- **Libraries**: The project should use standard Python libraries and only lightweight external libraries (`nltk`, `matplotlib`, `fpdf`).
+- **Libraries**: The project should use standard Python libraries and only lightweight external libraries (`nltk`, `matplotlib`, `seaborn` and `fpdf`).
 - **Report Structure**: The PDF must be simple and clear, with limited customization options.
 
 #### **Risks**:
@@ -72,12 +72,6 @@
      - Add text-based summaries (word counts, character counts, etc.).
      - Embed the saved chart images into the PDF using `fpdf.image()`.
 
-5. **User Interface (Optional)**:
-   - **Objective**: Allow users to upload text files and download the PDF report.
-   - **Implementation**:
-     - If a UI is needed, tools like **Streamlit** or **Tkinter** can provide a simple interface.
-     - For this project, I guess this will not be necessary.
-
 #### **How do the components interact?**
 
 1. **Input Handling**: 
@@ -103,32 +97,59 @@
 
 ### **3. Implementation**
 
-Writing the code. Including docstrings.
+#### **Writing The Code**
+
+Writing the code involves breaking down each component into well-defined functions. Each function should include docstrings that explain what the function does, the input it expects, and the output it returns. The main steps include:
+
+Writing functions for reading the input file, performing text analysis, creating visualizations, and generating the PDF report.
+
+Following good coding practices such as modularity, readability, and proper variable naming conventions.
+
+Importantly, ensuring that all edge cases (e.g., empty files, incorrect formats) are handled gracefully.
 
 ---
 
 ### **4. Testing**
 
-Does the code do what it is supposed to do? Does it handle errors well?
+#### **Does the code do what it is supposed to do?**
 
-Testing each function within Jupyter Notebook.
+Ensuring that the code functions as expected requires comprehensive testing:
 
-Running pytest to check test success for full python project. 
+Unit Testing: Each function should be tested individually using pytest. Key areas to test include:
+Whether the file input is correctly processed.
+Whether the text analysis functions return accurate results (e.g., correct word, sentence, and paragraph counts).
+Whether the visualizations are generated without errors.
+PDF generation should be tested to ensure that the final report includes both text and images as expected.
+Error Handling: Tests should check that the program handles errors correctly, such as invalid file types or missing files.
+Continuous Testing: Run pytest continuously during development to check if the code passes all test cases. Include screenshots of successful test runs in the documentation to demonstrate code reliability.
 
 ---
 
 ### **5. Documentation**
 
-How do you use the code? How does it work? How do you contribute to it?
+#### **How do you use the code? How does it work? How do you contribute to it?**
+
+Documentation is essential for users and contributors to understand the code. Key components include:
+
+User Guide: Explain how to install and run the software. Include details on how to upload a text file, what outputs to expect, and how to download the PDF report.
+Developer Guide: For contributors, document the structure of the codebase and provide instructions on how to add new features, run tests, and submit contributions.
+Docstrings: Ensure every function in the code is properly documented with docstrings explaining its purpose, parameters, and return values.
+Screenshots: Include relevant screenshots showing examples of the input file, analysis results, visualizations, and the final PDF report.
 
 ---
 
 ### **6. Deployment**
 
-How do you share the code with others? How do you make it easy for others to use it?
+#### **How do you share the code with others? How do you make it easy for others to use it?**
+
+To share the project with others:
+
+Packaging: Package the Python project for distribution, including all dependencies (like nltk, matplotlib, and fpdf) in a requirements.txt file.
+Distribution: Consider uploading the package to PyPI (Python Package Index) to make it easily installable using pip. Provide installation instructions for users, such as:
+
+`pip install thewordwizard`
+
+Version Control: Use GitHub to host the codebase. Include a detailed README.md file that contains installation steps, usage examples, and contribution guidelines.
+CI/CD Pipeline: Set up a Continuous Integration/Continuous Deployment (CI/CD) pipeline using tools like GitHub Actions to automate testing and deployment when changes are made.
 
 ---
-
-
-
-
