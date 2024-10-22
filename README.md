@@ -15,6 +15,8 @@ This project is a Python application designed to analyze text files and generate
   - **Word, Sentence, and Paragraph Counts**: Bar chart with three bars showing counts for words, sentences, and paragraphs.
   - **Character Counts**: Horizontal bar chart with two bars showing total characters and characters without spaces.
   - **Average Word Length**: Histogram displaying word length distribution.
+- **PDF Creation**:
+  - **Output Generation**: PDF report of the text analysis. Including the input text, text analysis numbers and visualizations.
 
 ## Output
 
