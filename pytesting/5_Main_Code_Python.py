@@ -37,7 +37,7 @@ def read_text_file(file_path):
         print("File not found! Please provide a valid file path.")
         return None
 
-file_path = 'mercedesbenz.txt'
+file_path = '4_Input_Sample_Text_Mercedes_Benz.txt'
 content = read_text_file(file_path)
 
 if content is not None:
@@ -106,7 +106,7 @@ def generate_visualizations(analysis_result, content):
             [analysis_result['word_count'], analysis_result['sentence_count'], analysis_result['paragraph_count']],
             color=['blue', 'green', 'red'])
     plt.title('Word, Sentence, and Paragraph Counts')
-    plt.savefig('counts_chart.png')
+    plt.savefig('7_output_counts_chart.png')
     plt.show()
 
     # Horizontal bar chart for character counts
@@ -116,7 +116,7 @@ def generate_visualizations(analysis_result, content):
          color=['purple', 'orange'])
     plt.yticks(rotation=90, va='center') # Set y-axis labels vertically and centered
     plt.title('Character Counts')
-    plt.savefig('character_chart.png')
+    plt.savefig('8_output_character_chart.png')
     plt.show()
 
     # Histogram of word length distribution
@@ -126,7 +126,7 @@ def generate_visualizations(analysis_result, content):
     plt.title('Word Length Distribution')
     plt.xlabel('Word Length')
     plt.ylabel('Frequency')
-    plt.savefig('word_length_histogram.png')
+    plt.savefig('9_output_word_length_histogram.png')
     plt.show()
 
 generate_visualizations(analysis_result, content)
@@ -192,15 +192,15 @@ def generate_pdf_report(analysis, input_text):
 
     # Add images
     try:
-        pdf.add_image('counts_chart.png')
-        pdf.add_image('character_chart.png')
-        pdf.add_image('word_length_histogram.png')
+        pdf.add_image('7_output_counts_chart.png')
+        pdf.add_image('8_output_character_chart.png')
+        pdf.add_image('9_output_word_length_histogram.png')
     except FileNotFoundError as e:
         print(f"Warning: {e} - One or more image files not found.")
 
     # Save PDF
-    pdf.output('text_analysis_report.pdf')
-    print("PDF report generated: 'text_analysis_report.pdf'")
+    pdf.output('10_output_analysis_report.pdf')
+    print("PDF report generated: '10_output_analysis_report.pdf'")
 
 generate_pdf_report(analysis_result, content)
 
@@ -213,8 +213,28 @@ generate_pdf_report(analysis_result, content)
 # * Images in the pdf doc are cut off (the title on the y-axis of second image) - fixed
 # * I want to add the input text itself also in the pdf report in the beginning - fixed
 
-# In[ ]:
+# ## Testing docstrings
+
+# In[6]:
 
 
+help(read_text_file)
 
+
+# In[7]:
+
+
+help(analyze_text)
+
+
+# In[8]:
+
+
+help(generate_visualizations)
+
+
+# In[9]:
+
+
+help(generate_pdf_report)
 
