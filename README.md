@@ -129,6 +129,12 @@ To install the required libraries and the final program package, use 'pip instal
 5. **User Interaction**:
    - The user uploads the file and downloads the PDF report after the analysis and visualizations are complete.
 
+## Usage
+
+1. **Input**: Place your text file (`.txt` format) in the project directory.
+2. **Run the Script**: Execute the Python script to analyze the text and generate visualizations.
+3. **Output**: Visualizations and a PDF report will be created, including charts and analysis results.
+
 ---
 
 ### **3. Implementation**
@@ -184,10 +190,3 @@ To ensure that the code functions as expected, pytest is used to analyze the sof
 `pip install thewordwizard`
 
 ---
-
-
-## Usage
-
-1. **Input**: Place your text file (`.txt` format) in the project directory.
-2. **Run the Script**: Execute the Python script to analyze the text and generate visualizations.
-3. **Output**: Visualizations and a PDF report will be created, including charts and analysis results.
